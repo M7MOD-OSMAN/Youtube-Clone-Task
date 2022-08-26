@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.youtube-logo {
+  height: 20px;
+}
+
+.search-bar {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 2rem 0 4rem;
+}
+
+.search-input {
+  width: 80%;
+  font-size: inherit;
+  padding: 0.4em;
+  border: 1px solid #777;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  border: 1px solid #777;
+  background-color: #f8f8f8;
+  border-left: none;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.mainBody {
+  flex: 0.8;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  padding-bottom: 0;
+}
+
+.mainBodyContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainBodyContainer * {
+  margin-left: 5%;
+}
+
+.video {
+  width: 270px;
+
+  margin-bottom: 40px;
+}
+
+.video__thumbnail {
+  width: 270px;
+  height: 190px;
+}
+
+.video__details {
+  display: flex;
+  flex-direction: start;
+  margin-top: 10px;
+  padding-right: 30px;
+}
+
+.title {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.title h3 {
+  color: rgb(3, 3, 3);
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.title > p {
+  font-style: 14px;
+  color: gray;
+  margin-top: 10px;
+}
+.title a,
+span {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(3, 3, 3);
+}
+
+@media (max-width: 425px) {
+  .header__icons .material-icons {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header__icons .display-this {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 941px) {
+  .header__search input {
+    width: 300px;
   }
 }
